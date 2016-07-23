@@ -104,8 +104,7 @@ set mouse=
 autocmd FileType python setlocal foldmethod=indent
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,gbk,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
-"nmap <S-p> i#!/usr/bin/python<CR>#-*-coding:utf-8-*-<CR>
-"imap <S-tab> <esc>V<i
+autocmd BufNewFile *.py 0put =\"#!/usr/bin/python\<nl>#-*-coding:utf-8-*-\<nl>\"|$
 imap <C-d> <delete>
 " " toggle line number
 imap <F12> <ESC>:set invnumber<CR>i
